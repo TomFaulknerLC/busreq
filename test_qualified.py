@@ -41,7 +41,7 @@ def test_user_is_qualified():
     qualified, score = is_qualified(business_requirements, user, 100)
 
     assert qualified is True
-    assert score == 100
+    assert score == 160.0
 
 
 def test_user_is_not_qualified():
@@ -51,7 +51,7 @@ def test_user_is_not_qualified():
         'employment_start_date': datetime.date(year=2020, month=6, day=7),
         'location': "New York, NY",
     }
-    qualified, score = is_qualified(business_requirements, user, 100)
+    qualified, score = is_qualified(business_requirements, user, 200)
 
     assert qualified is False
-    assert score == 100
+    assert score == 160.0
