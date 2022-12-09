@@ -3,18 +3,18 @@ const godzilla = {
 };
 
 
-function calculate_distance(user_location, godzilla_location) {
+function calculateDistance(user_location, godzilla_location) {
     return 10000;
 }
 
 
-function is_qualified(req, user, target_score) {
+function isQualified(req, user, target_score) {
     throw new Error("Not implemented.");
 }
 
 
 function main() {
-    const business_requirements = {
+    const businessRequirements = {
         'debt_to_income_ratio': {
             'action': 'lte',
             'value': '40%',
@@ -43,7 +43,7 @@ function main() {
         'employment_start_date': new Date(2020, 5, 7),
         'location': "New York, NY",
     }
-    console.log(`Is Qualified: ${is_qualified(business_requirements, user, 200)}`);
+    console.log(`Is Qualified: ${isQualified(businessRequirements, user, 200)}`);
 };
 
 

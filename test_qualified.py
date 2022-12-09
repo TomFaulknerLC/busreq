@@ -1,34 +1,18 @@
 import datetime
+import json
 
 from .qualified import is_qualified
 
-business_requirements = {
-    'debt_to_income_ratio': {
-        'action': 'lte',
-        'value': '40%',
-        'weight': 0.8,
-    },
-    'is_employed': {
-        'action': 'e',
-        'value': 'True',
-        'disqualifying': True,
-        'weight': 1,
-    },
-    'employment_duration': {
-        'action': 'gt',
-        'value': '36 months',
-        'weight': 0.4,
-    },
-    'distance_from_godzilla': {
-        'action': 'gte',
-        'value': '100 miles',
-        'weight': 0.6,
-    },
-}
+with open('test_requirements_1.json') as f:
+    business_requirements = json.load(f)
 
 
 def test_is_qualified_exists():
     assert is_qualified is not None
+
+
+def test_json_loaded():
+    assert isinstance(business_requirements, dict)
 
 
 def test_user_is_qualified():

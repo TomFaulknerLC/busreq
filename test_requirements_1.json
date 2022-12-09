@@ -1,0 +1,23 @@
+{
+    "debt_to_income_ratio": {
+        "action": "lte",
+        "value": "40%",
+        "weight": 0.8
+    },
+    "is_employed": {
+        "action": "e",
+        "value": "True",
+        "disqualifying": true,
+        "weight": 1
+    },
+    "employment_duration": {
+        "action": "gt",
+        "value": "36 months",
+        "weight": 0.4
+    },
+    "distance_from_godzilla": {
+        "action": "gte",
+        "value": "100 miles",
+        "weight": 0.6
+    }
+}
