@@ -3,12 +3,12 @@ const godzilla = {
 };
 
 
-function calculateDistance(user_location, godzilla_location) {
+export function calculateDistance(user_location, godzilla_location) {
     return 10000;
 }
 
 
-function isQualified(req, user, target_score) {
+export function isQualified(req, user, target_score) {
     throw new Error("Not implemented.");
 }
 
